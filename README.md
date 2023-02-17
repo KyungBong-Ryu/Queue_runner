@@ -1,6 +1,8 @@
 # Queue_runner
 Very easy way for .py file running queue manager
 
+Verified with example.py, example_2.py, and example_5.py
+
 # Instruction
 Put _Queue_runner.py and _Queue_list.txt in your project folder.
 
