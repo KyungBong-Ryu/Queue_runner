@@ -1,0 +1,415 @@
+===============[ Start Queue_runner ]===============       ,2023.02.21 - 15:44:58
+
+<>===[ Reading: ( ./_Queue_list.txt ) 1 / 10 ]===<>       ,2023.02.21 - 15:44:58
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+¦±---Scanned lists---¦°
+
+===[ Try running... ( example.py ) ]===       ,2023.02.21 - 15:44:58
+===[ Success: ( example.py ) ]===       ,2023.02.21 - 15:44:59
+===[ Try running... ( example_2.py ) ]===       ,2023.02.21 - 15:44:59
+===[ Success: ( example_2.py ) ]===       ,2023.02.21 - 15:45:00
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:00
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:00
+===[ Try running... ( ./folder_example/example_sub.py ) ]===       ,2023.02.21 - 15:45:00
+===[ Success: ( ./folder_example/example_sub.py ) ]===       ,2023.02.21 - 15:45:01
+===[ Try running... ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===       ,2023.02.21 - 15:45:01
+===[ Success: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===       ,2023.02.21 - 15:45:02
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:02
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:02
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:02
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:02
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:02
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:02
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:02
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:02
+===[ Try running... ( example_5.py ) ]===       ,2023.02.21 - 15:45:02
+===[ Success: ( example_5.py ) ]===       ,2023.02.21 - 15:45:03
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:03
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:03
+
+<>===[ Reading: ( ./_Queue_list.txt ) 2 / 10 ]===<>       ,2023.02.21 - 15:45:06
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:06
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:06
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:06
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:06
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:06
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:06
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:06
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:06
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:06
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:06
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:06
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:06
+
+<>===[ Reading: ( ./_Queue_list.txt ) 3 / 10 ]===<>       ,2023.02.21 - 15:45:09
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:09
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:09
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:09
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:09
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:09
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:09
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:09
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:09
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:09
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:09
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:09
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:09
+
+<>===[ Reading: ( ./_Queue_list.txt ) 4 / 10 ]===<>       ,2023.02.21 - 15:45:12
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:12
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:12
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:12
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:12
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:12
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:12
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:12
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:12
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:12
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:13
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:13
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:13
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:13
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:13
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:13
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:13
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:13
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:13
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:13
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:13
+===[ Try running... ( example_2.py --name example_2_2 --epoch 220 ) ]===       ,2023.02.21 - 15:45:13
+===[ Success: ( example_2.py --name example_2_2 --epoch 220 ) ]===       ,2023.02.21 - 15:45:14
+===[ Try running... ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===       ,2023.02.21 - 15:45:14
+===[ Success: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===       ,2023.02.21 - 15:45:15
+
+<>===[ Reading: ( ./_Queue_list.txt ) 5 / 10 ]===<>       ,2023.02.21 - 15:45:18
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:18
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:18
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:18
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:18
+
+<>===[ Reading: ( ./_Queue_list.txt ) 6 / 10 ]===<>       ,2023.02.21 - 15:45:21
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:21
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:21
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:21
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:21
+
+<>===[ Reading: ( ./_Queue_list.txt ) 7 / 10 ]===<>       ,2023.02.21 - 15:45:24
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:24
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:24
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:24
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:24
+
+<>===[ Reading: ( ./_Queue_list.txt ) 8 / 10 ]===<>       ,2023.02.21 - 15:45:27
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:27
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:27
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:27
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:27
+
+<>===[ Reading: ( ./_Queue_list.txt ) 9 / 10 ]===<>       ,2023.02.21 - 15:45:30
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:30
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:30
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:30
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:30
+
+<>===[ Reading: ( ./_Queue_list.txt ) 10 / 10 ]===<>       ,2023.02.21 - 15:45:33
+
+¦®---Scanned lists---¦¯
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+¦±---Scanned lists---¦°
+
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ WARNING: ( example_2.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ Try running... ( help.exe ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: ( help.exe ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ Try running... ( example_3.py ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: Can not run ( example_3.py ) ]***       ,2023.02.21 - 15:45:33
+===[ Try running... ( help.exe --type not_a_py_file ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ Try running... ( aaaaa ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: ( aaaaa ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ WARNING: ( example_5.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ Try running... (  ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: (  ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===       ,2023.02.21 - 15:45:33
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***       ,2023.02.21 - 15:45:33
+===[ WARNING: ( example.py ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===       ,2023.02.21 - 15:45:33
+
+
+
+===============[ Finish Queue_runner ]===============       ,2023.02.21 - 15:45:36

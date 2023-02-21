@@ -1,10 +1,13 @@
 import os
 import time
 
-def logger(path_file, in_str):
+def logger(path_file, in_str, write_time=True):
     with open(path_file, "a") as log_txt:
         _str = str(time.strftime('%Y.%m.%d - %H:%M:%S'))
-        log_txt.write(in_str + "       ," + _str + "\n")
+        if write_time:
+            log_txt.write(in_str + "       ," + _str + "\n")
+        else:
+            log_txt.write(in_str + "\n")
     print(in_str)
 
 
@@ -26,7 +29,17 @@ if __name__ == "__main__":
         count_scan = i_scan + 1
         _str = "\n<>===[ Reading: ( " + path_q_list + " ) " + str(count_scan) + " / " + str(count_scan_max) + " ]===<>"
         logger(log_q_runner, _str)
-    
+        
+        _str = "\n┏---Scanned lists---┓"
+        logger(log_q_runner, _str, write_time=False)
+        with open(path_q_list, "r") as q_list_txt:
+            q_list_lines = q_list_txt.readlines()
+            for q_list_line in q_list_lines:
+                q_name = q_list_line.strip("\n")
+                logger(log_q_runner, q_name, write_time=False)
+        _str = "┗---Scanned lists---┛\n"
+        logger(log_q_runner, _str, write_time=False)
+        
         try:
             with open(path_q_list, "r") as q_list_txt:
                 q_list_lines = q_list_txt.readlines()
@@ -40,7 +53,7 @@ if __name__ == "__main__":
                         _str = "===[ Try running... ( " + q_name + " ) ]==="
                         logger(log_q_runner, _str)
                         try:
-                            is_py = q_name.split(".")[-1]
+                            is_py = q_name.split(" ")[0].split(".")[-1]
                             if is_py == "py":
                                 _run = "python " + q_name
                                 _result = os.system(_run)

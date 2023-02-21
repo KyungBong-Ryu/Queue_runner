@@ -1,0 +1,474 @@
+C:\Users\user\anaconda3\envs\py38\python.exe C:/Users/user/PycharmProjects/Queue_runner_test/_Queue_runner.py
+===============[ Start Queue_runner ]===============
+
+<>===[ Reading: ( ./_Queue_list.txt ) 1 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+┗---Scanned lists---┛
+
+===[ Try running... ( example.py ) ]===
+
+init example
+epoch = 100
+finish example
+
+===[ Success: ( example.py ) ]===
+===[ Try running... ( example_2.py ) ]===
+
+init example_2
+epoch = 200
+finish example_2
+
+===[ Success: ( example_2.py ) ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ Try running... ( ./folder_example/example_sub.py ) ]===
+
+init example_sub
+epoch = 110
+finish example_sub
+
+===[ Success: ( ./folder_example/example_sub.py ) ]===
+===[ Try running... ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===
+
+init example_sub_1
+epoch = 110
+finish example_sub_1
+
+===[ Success: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ Try running... ( example_5.py ) ]===
+
+init example_5
+epoch = 500
+finish example_5
+
+===[ Success: ( example_5.py ) ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+
+<>===[ Reading: ( ./_Queue_list.txt ) 2 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+
+<>===[ Reading: ( ./_Queue_list.txt ) 3 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+<>===[ Reading: ( ./_Queue_list.txt ) 4 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ Try running... ( example_2.py --name example_2_2 --epoch 220 ) ]===
+
+init example_2_2
+epoch = 220
+finish example_2_2
+
+===[ Success: ( example_2.py --name example_2_2 --epoch 220 ) ]===
+===[ Try running... ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===
+
+init example_sub_2
+epoch = 150
+finish example_sub_2
+
+===[ Success: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===
+
+<>===[ Reading: ( ./_Queue_list.txt ) 5 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+
+<>===[ Reading: ( ./_Queue_list.txt ) 6 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+
+<>===[ Reading: ( ./_Queue_list.txt ) 7 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+<>===[ Reading: ( ./_Queue_list.txt ) 8 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+
+<>===[ Reading: ( ./_Queue_list.txt ) 9 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+<>===[ Reading: ( ./_Queue_list.txt ) 10 / 10 ]===<>
+
+┏---Scanned lists---┓
+example.py
+example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
+
+example_3.py
+help.exe --type not_a_py_file
+aaaaa
+example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
+┗---Scanned lists---┛
+
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py ) passed... It has already done ]===
+===[ Try running... ( help.exe ) ]===
+***[ FAILURE: ( help.exe ) is not a .py file ]***
+===[ WARNING: ( ./folder_example/example_sub.py ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+
+***[ FAILURE: Can not run ( example_3.py ) ]***
+===[ Try running... ( help.exe --type not_a_py_file ) ]===
+***[ FAILURE: ( help.exe --type not_a_py_file ) is not a .py file ]***
+===[ Try running... ( aaaaa ) ]===
+***[ FAILURE: ( aaaaa ) is not a .py file ]***
+===[ WARNING: ( example_5.py ) passed... It has already done ]===
+===[ Try running... (  ) ]===
+***[ FAILURE: (  ) is not a .py file ]***
+===[ Try running... ( below lines are added while _Queue_runner.py is running ) ]===
+***[ FAILURE: ( below lines are added while _Queue_runner.py is running ) is not a .py file ]***
+===[ WARNING: ( example.py ) passed... It has already done ]===
+===[ WARNING: ( example_2.py --name example_2_2 --epoch 220 ) passed... It has already done ]===
+===[ WARNING: ( ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) passed... It has already done ]===
+
+
+
+===============[ Finish Queue_runner ]===============
+EOF: _Queue_runner.py
+
+Process finished with exit code 0
