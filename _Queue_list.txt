@@ -1,7 +1,15 @@
 example.py
 example_2.py
+help.exe
+./folder_example/example_sub.py
+./folder_example/example_sub.py --name example_sub_1 --epoch 110
 
 example_3.py
-
+help.exe --type not_a_py_file
 aaaaa
 example_5.py
+
+below lines are added while _Queue_runner.py is running
+example.py
+example_2.py --name example_2_2 --epoch 220
+./folder_example/example_sub.py --name example_sub_2 --epoch 150
