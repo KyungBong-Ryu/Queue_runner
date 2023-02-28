@@ -52,26 +52,39 @@ if __name__ == "__main__":
                     else:
                         _str = "===[ Try running... ( " + q_name + " ) ]==="
                         logger(log_q_runner, _str)
-                        try:
-                            is_py = q_name.split(" ")[0].split(".")[-1]
-                            if is_py == "py":
-                                _run = "python " + q_name
+                        list_finished.append(q_name)
+                        
+                        is_py = q_name.split(" ")[0].split(".")[-1]
+                        if is_py == "py":
+                            _run = "python " + q_name
+                            _result = None
+                            try:
                                 _result = os.system(_run)
-                                print("")
-                                if _result == 0:
-                                    list_finished.append(q_name)
-                                    _str = "===[ Success: ( " + q_name + " ) ]==="
-                                else:
-                                    _str = "***[ FAILURE: Can not run ( " + q_name + " ) ]***"
-                            else:
-                                _str = "***[ FAILURE: ( " + q_name + " ) is not a .py file ]***"
+                            except:
+                                # Case: KeyboardInterrupt
+                                pass
+                            print("")
                             
-                            logger(log_q_runner, _str)
-                        except:
-                            pass
+                            if _result is None:
+                                # Case: KeyboardInterrupt
+                                _str = "===[ FAILURE: Can not run ( " + q_name + " )... maybe KeyboardInterrupt occurred while running ]==="
+                            elif _result == 0:
+                                # Case: Success
+                                _str = "===[ Success: ( " + q_name + " ) ]==="
+                            else:
+                                # Case: sys.exit() or something
+                                try:
+                                    _str = "===[ FAILURE: Error caused ( " + q_name + " ) shut-down with error code ( " + str(_result) + " ) ]==="
+                                except:
+                                    _str = "===[ FAILURE: Error caused ( " + q_name + " ) shut-down with error code ( unknown ) ]==="
+                        else:
+                            _str = "===[ FAILURE: ( " + q_name + " ) is not a .py file ]==="
+                        
+                        logger(log_q_runner, _str)
+                        
         
         except:
-            _str = "***[ FAILURE: Can not find ( " + path_q_list + " ) file ]***"
+            _str = "===[ FAILURE: Can not find ( " + path_q_list + " ) file ]==="
             logger(log_q_runner, _str)
         
         time.sleep(3)
