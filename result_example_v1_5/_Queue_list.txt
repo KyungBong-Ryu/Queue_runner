@@ -11,7 +11,8 @@ python help.exe --type not_a_py_file
 aaaaa
 python example_5.py
 
-# below lines are added while _Queue_runner.py is running
+# below lines are modified while _Queue_runner.py is running
 python example.py
 python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+# python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
 python ./folder_example/example_sub.py --name example_sub_2 --epoch 150

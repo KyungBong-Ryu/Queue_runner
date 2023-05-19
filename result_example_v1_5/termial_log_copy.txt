@@ -1,0 +1,397 @@
+PS C:\Users\user\PycharmProjects\Q_runner_Test> python _Queue_runner.py --path_in C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt --scan_max 50 --wildcard wildcardtest
+===============[ Start Queue_runner ]===============
+Queue list from: C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt
+Queue list scan repeat: 50 times
+Allowed command head: python, srun, #, wildcardtest
+Comment head: #
+Applied wildcard: wildcardtest
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 1 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+(*Ready  *)     python example.py
+( Pending )     python example_2.py
+( Denied  )     help.exe
+( Pending )     python ./folder_example/example_sub.py
+( Pending )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Pending )     wildcardtest go.exe
+( Denied  )
+( Pending )     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Pending )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python example.py ) ]===
+
+init example
+epoch = 100
+finish example
+===[ Success: ( python example.py ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 2 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+(*Ready  *)     python example_2.py
+( Denied  )     help.exe
+( Pending )     python ./folder_example/example_sub.py
+( Pending )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Pending )     wildcardtest go.exe
+( Denied  )
+( Pending )     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python example_2.py ) ]===
+
+init example_2
+epoch = 200
+finish example_2
+===[ Success: ( python example_2.py ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 3 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+(*Ready  *)     python ./folder_example/example_sub.py
+( Pending )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Pending )     wildcardtest go.exe
+( Denied  )
+( Pending )     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python ./folder_example/example_sub.py ) ]===
+
+init example_sub
+epoch = 110
+finish example_sub
+===[ Success: ( python ./folder_example/example_sub.py ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 4 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+(*Ready  *)     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Pending )     wildcardtest go.exe
+( Denied  )
+( Pending )     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===
+
+init example_sub_1
+epoch = 110
+finish example_sub_1
+===[ Success: ( python ./folder_example/example_sub.py --name example_sub_1 --epoch 110 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 5 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+(*Ready  *)     wildcardtest go.exe
+( Denied  )
+( Pending )     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( wildcardtest go.exe ) ]===
+'wildcardtest'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+===[ FAILURE: Error caused ( wildcardtest go.exe ) shut-down with error code ( 1 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 6 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+(*Ready  *)     python example_3.py
+( Pending )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python example_3.py ) ]===
+python: can't open file 'example_3.py': [Errno 2] No such file or directory
+===[ FAILURE: Error caused ( python example_3.py ) shut-down with error code ( 2 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 7 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+(*Ready  *)     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Pending )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python help.exe --type not_a_py_file ) ]===
+python: can't open file 'help.exe': [Errno 2] No such file or directory
+===[ FAILURE: Error caused ( python help.exe --type not_a_py_file ) shut-down with error code ( 2 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 8 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+( Failed  )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+(*Ready  *)     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Pending )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python example_5.py ) ]===
+
+init example_5
+epoch = 500
+finish example_5
+===[ Success: ( python example_5.py ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 9 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+( Failed  )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Done    )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+(*Ready  *)     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Pending )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220 ) ]===
+
+init example_2_2
+epoch = 220
+finish example_2_2
+===[ Success: ( python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 10 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+( Failed  )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Done    )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Done    )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+(*Ready  *)     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+===[ Try running... ( python ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===
+
+init example_sub_2
+epoch = 150
+finish example_sub_2
+===[ Success: ( python ./folder_example/example_sub.py --name example_sub_2 --epoch 150 ) ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 11 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+( Failed  )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Done    )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Done    )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Done    )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+
+===[ no command left to run ]===
+
+
+
+<>===[ Reading: ( C:/Users/user/PycharmProjects/Q_runner_Test/_Queue_list.txt ) 12 / 50 ]===<>
+
+---[ Scanned lists ]---
+
+( Done    )     python example.py
+( Done    )     python example_2.py
+( Denied  )     help.exe
+( Done    )     python ./folder_example/example_sub.py
+( Done    )     python ./folder_example/example_sub.py --name example_sub_1 --epoch 110
+( Denied  )
+( Failed  )     wildcardtest go.exe
+( Denied  )
+( Failed  )     python example_3.py
+( Failed  )     python help.exe --type not_a_py_file
+( Denied  )     aaaaa
+( Done    )     python example_5.py
+( Denied  )
+( Comment )     # below lines are modified while _Queue_runner.py is running
+( Done    )     python example.py
+( Done    )     python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_2 --epoch 220
+( Comment )     # python C:/Users/user/PycharmProjects/Q_runner_Test/example_2.py --name example_2_5 --epoch 550
+( Done    )     python ./folder_example/example_sub.py --name example_sub_2 --epoch 150
+
+--- [ Scanned lists ]---
+
+
+===[ no command left to run ]===
