@@ -14,3 +14,5 @@ v 1.5
 	이미 읽어진 queue list에서 실행할 command를 제거 혹은 수정할 수 있도록 변경
 	"python" 이외의 command head 사용 가능하도록 수정
 	# 문자를 통해 comment 작성 가능
+v 1.5.1
+	_Queue_list.txt의 encoding type을 UTF8로 지정

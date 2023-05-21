@@ -3,7 +3,7 @@ import time
 import argparse
 
 def logger(path_file, in_str, write_time=True):
-    with open(path_file, "a") as log_txt:
+    with open(path_file, "a", encoding='UTF8') as log_txt:
         _str = str(time.strftime('%Y.%m.%d - %H:%M:%S'))
         if write_time:
             log_txt.write(in_str + "       ," + _str + "\n")
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         try:
             _str = "\n---[ Scanned lists ]---\n"
             logger(log_q_runner, _str, write_time=False)
-            with open(path_q_list, "r") as q_list_txt:
+            with open(path_q_list, "r", encoding='UTF8') as q_list_txt:
                 q_list_lines = q_list_txt.readlines()
                 _flag_ready = 0
                 for q_list_line in q_list_lines:
@@ -109,7 +109,7 @@ if __name__ == "__main__":
             _str = "\n--- [ Scanned lists ]---\n"
             logger(log_q_runner, _str, write_time=False)
             
-            with open(path_q_list, "r") as q_list_txt:
+            with open(path_q_list, "r", encoding='UTF8') as q_list_txt:
                 q_list_lines = q_list_txt.readlines()
                 for q_list_line in q_list_lines:
                     q_command = q_list_line.strip("\n")
