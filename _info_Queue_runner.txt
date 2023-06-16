@@ -16,3 +16,8 @@ v 1.5
 	# 문자를 통해 comment 작성 가능
 v 1.5.1
 	_Queue_list.txt의 encoding type을 UTF8로 지정
+v 1.6
+	argparse.hook_runout 추가 (default: False)
+		txt 파일로 stdout을 hook (bool)
+	argparse.hook_runerr 추가 (default: True)
+		txt 파일로 stderr을 hook (bool)
