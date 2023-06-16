@@ -1,6 +1,8 @@
 import os
+import sys
 import time
 import argparse
+import subprocess
 
 def logger(path_file, in_str, write_time=True):
     with open(path_file, "a", encoding='UTF8') as log_txt:
@@ -27,35 +29,55 @@ if __name__ == "__main__":
     parser_options = argparse.ArgumentParser(description='_options')
     # set default
     path_q_list                 = "./_Queue_list.txt"                                                   # Queue list. 실행할 command 한 줄에 하나씩 적어두기
-    log_q_runner                = "./_Queue_log_" + str(time.strftime('%Y_%m_%d_%H_%M_%S')) + ".txt"    # Queue_runner 실행기록. 파일 없으면 생성후 기록함
+    path_q_out                  = "./_Queue_log_" + str(time.strftime('%Y_%m_%d_%H_%M_%S'))             # Queue_runner 실행기록 저장폴더
+    
     command_restriction         = True                                                                  # command head 제한 여부
     list_allowd_command_head    = ["python", "srun", "#"]                                               # 사용 가능한 command 첫 단어 / #은 comment로 처리 -> 실행 안됨
     list_comment_head           = ["#"]                                                                 # comment 로 인식할 command head list
     
+    
+    # ignore_fail -> hook_result -> hook_runout, hook_runerr
+    hook_runout                 = False                                                                 # command 실행 결과 output hook 여부
+    hook_runerr                 = True                                                                  # command 실행 결과 error  hook 여부
+    hook_count                  = 0
+    
     list_finished = []      # 시도한 command
     list_failed   = []      # 실패한 command 
+    dict_hooked   = {}      # hook 된 command
     
     count_scan_max = 100                 # queue list txt 파일 읽는 횟수
     count_scan     = 0
     
     parser_options.add_argument("--path_in",             type = str,      default = path_q_list,         help = "Path + file name for Queue list text file (str)")
-    parser_options.add_argument("--path_out",            type = str,      default = log_q_runner,        help = "Path + file name for Queue log text file (str)")
+    parser_options.add_argument("--path_out",            type = str,      default = path_q_out,          help = "Path + file name for Queue log text file (str)")
     parser_options.add_argument("--command_restriction", type = str2bool, default = command_restriction, help = "Command head restriction application (bool)")
     parser_options.add_argument("--scan_max",            type = int,      default = count_scan_max,      help = "Queue list file scan repeat (int)")
     parser_options.add_argument("--wildcard",            type = str,      default = None,                help = "Additional allowed command head (str)")
+    parser_options.add_argument("--hook_runout",         type = str2bool, default = hook_runout,         help = "Hook command output (bool)")
+    parser_options.add_argument("--hook_runerr",         type = str2bool, default = hook_runerr,         help = "Hook command error (bool)")
     
-    # argparse -> parser
+    # argparse -> parser 
     args_options        = parser_options.parse_args()
     path_q_list         = args_options.path_in
-    log_q_runner        = args_options.path_out
+    path_q_out          = args_options.path_out
+    
+    if not os.path.exists(path_q_out):
+        os.makedirs(path_q_out)
+    
+    log_q_runner = path_q_out + "/log_Queue_runner.txt"  # Queue_runner 실행로그. 파일 없으면 생성후 기록함.
+    
     command_restriction = args_options.command_restriction
     count_scan_max      = args_options.scan_max
     if args_options.wildcard is not None:
         list_allowd_command_head.append(args_options.wildcard)
-    
+    hook_runout         = args_options.hook_runout
+    hook_runerr         = args_options.hook_runerr
     
     _str = "===============[ Start Queue_runner ]==============="
     logger(log_q_runner, _str)
+    
+    _str = "Queue_runner log to: " + path_q_out
+    logger(log_q_runner, _str, write_time=False)
     
     _str = "Queue list from: " + path_q_list
     logger(log_q_runner, _str, write_time=False)
@@ -78,6 +100,9 @@ if __name__ == "__main__":
         _str = "Applied wildcard: " + args_options.wildcard
     logger(log_q_runner, _str, write_time=False)
     
+    _str = "Hook run output: " + str(hook_runout) + ", error: " + str(hook_runerr)
+    logger(log_q_runner, _str, write_time=False)
+    
     for count_scan in range(count_scan_max):
         count_scan = count_scan + 1  # (0 ~ n-1) -> (1 ~ n)
         _str = "\n\n\n<>===[ Reading: ( " + path_q_list + " ) " + str(count_scan) + " / " + str(count_scan_max) + " ]===<>"
@@ -92,9 +117,19 @@ if __name__ == "__main__":
                     q_command = q_list_line.strip("\n")
                     if q_command.split(" ")[0] in list_allowd_command_head or not command_restriction:
                         if q_command in list_failed:
-                            _str = "( Failed  )\t" + q_command
+                            try:
+                                _hook_num = dict_hooked[q_command]
+                                _id = "Fail " + str(_hook_num) + "      "
+                                _str = "( " + _id[:7] + " )\t" + q_command
+                            except:
+                                _str = "( Failed  )\t" + q_command
                         elif q_command in list_finished:
-                            _str = "( Done    )\t" + q_command
+                            try:
+                                _hook_num = dict_hooked[q_command]
+                                _id = "Done " + str(_hook_num) + "      "
+                                _str = "( " + _id[:7] + " )\t" + q_command
+                            except:
+                                _str = "( Done    )\t" + q_command
                         elif q_command.split(" ")[0] in list_comment_head:
                             _str = "( Comment )\t" + q_command
                         else:
@@ -125,11 +160,46 @@ if __name__ == "__main__":
                         logger(log_q_runner, _str)
                         list_finished.append(q_command)
                         
-                        try:
+                        _result = None                  # Case: KeyboardInterrupt
+                        
+                        if hook_runout or hook_runerr:
+                            hook_count += 1
+                            dict_hooked[q_command] = hook_count
+                            path_log_hook = path_q_out + "/log_hook_" + str(hook_count) + ".txt"
+                            
+                            with open(path_log_hook, "w", encoding='UTF8') as log_hook:
+                                _str = "Run command was...\n\t" + q_command + "\n\n"
+                                log_hook.write(_str)
+                            
+                            with open(path_log_hook, "a", encoding='UTF8') as log_hook:
+                                # command 실행 결과 hook 시행
+                                try:
+                                    # check=True를 통해 q_command 실행 실패시 오류 발생시킴
+                                    # https://stackoverflow.com/questions/803265/getting-realtime-output-using-subprocess
+                                    if hook_runout and hook_runerr:
+                                        _run_result = subprocess.run([q_command]
+                                                                    ,stdout=log_hook, stderr=log_hook
+                                                                    ,shell=True, check=True
+                                                                    ,encoding='utf-8',errors='utf-8', text=True
+                                                                    )
+                                    elif hook_runout:
+                                        _run_result = subprocess.run([q_command]
+                                                                    ,stdout=log_hook, stderr=sys.stderr
+                                                                    ,shell=True, check=True
+                                                                    ,encoding='utf-8',errors='utf-8', text=True
+                                                                    )
+                                    elif hook_runerr:
+                                        _run_result = subprocess.run([q_command]
+                                                                    ,stdout=sys.stdout, stderr=log_hook
+                                                                    ,shell=True, check=True
+                                                                    ,encoding='utf-8',errors='utf-8', text=True
+                                                                    )
+                                    _result =_run_result.returncode
+                                except:
+                                    _result = -9
+                        else:
+                            # command 실행 결과 hook 시행 안함 (v 1.5.x 방법)
                             _result = os.system(q_command)
-                        except:
-                            # Case: KeyboardInterrupt
-                            _result = None
                         
                         if _result is None:
                             # Case: KeyboardInterrupt
@@ -138,6 +208,10 @@ if __name__ == "__main__":
                         elif _result == 0:
                             # Case: Success
                             _str = "===[ Success: ( " + q_command + " ) ]==="
+                        elif _result == -9:
+                            # case: FAIL with subprocess.run
+                            _str = "===[ FAILURE: ( " + q_command + " ) with subprocess.run ]==="
+                            list_failed.append(q_command)
                         else:
                             # Case: sys.exit() or something
                             list_failed.append(q_command)
