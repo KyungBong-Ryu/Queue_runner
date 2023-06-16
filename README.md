@@ -13,10 +13,12 @@ _Queue_runner.py를 실행하세요.
 
 # Details
 Page 1
-![image](https://github.com/KyungBong-Ryu/Queue_runner/assets/103981195/779fa2d5-8270-4934-8bf2-d6c9d489ffcd)
+![page_1](https://github.com/KyungBong-Ryu/Queue_runner/assets/103981195/9e23bf28-3529-4624-ba4a-db3f232cb272)
+
 
 Page 2
-![image](https://github.com/KyungBong-Ryu/Queue_runner/assets/103981195/b8447b32-3531-43ce-a066-fc199ffb52a5)
+![page_2](https://github.com/KyungBong-Ryu/Queue_runner/assets/103981195/df18861c-7f28-403d-8aa5-ec2c80835d11)
+
 
 
 Page 3
