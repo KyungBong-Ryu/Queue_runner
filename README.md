@@ -1,6 +1,11 @@
 # Queue_runner
 easy OS command queue system
 
+# WARNING
+Curruntly HOOK is only available on LINUX like OS (Cent, Ubuntu, ...)
+
+현재 HOOK 기능은 LINUX 계열 OS (CentOS, Ubuntu, ...) 에서만 사용 가능합니다.
+
 # Quick Instruction (사용법)
 Put _Queue_runner.py and _Queue_list.txt in your project folder like this repo.
 
