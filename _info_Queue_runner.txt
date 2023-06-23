@@ -1,23 +1,39 @@
 init (v 1.0)
-	최초 업로드
+    최초 업로드
+    
 v 1.1
-	log 파일 이름 및 기록 양식 수정
+    log 파일 이름 및 기록 양식 수정
+    
 v.1.2
-	info 파일 추가
+    info 파일 추가
+    
 v 1.3
-	argparse 지원
+    argparse 지원
+    
 v 1.4
-	예외처리 및 오류 안내문 수정
-	실행성공여부에 관계없이 queue list 내 실행명령문은 1회만 시도
+    예외처리 및 오류 안내문 수정
+    실행성공여부에 관계없이 queue list 내 실행명령문은 1회만 시도
+    
 v 1.5
-	argparse를 통해 code 수정 없이 옵션 변경 가능
-	이미 읽어진 queue list에서 실행할 command를 제거 혹은 수정할 수 있도록 변경
-	"python" 이외의 command head 사용 가능하도록 수정
-	# 문자를 통해 comment 작성 가능
+    argparse를 통해 code 수정 없이 옵션 변경 가능
+    이미 읽어진 queue list에서 실행할 command를 제거 혹은 수정할 수 있도록 변경
+    "python" 이외의 command head 사용 가능하도록 수정
+    # 문자를 통해 comment 작성 가능
+    
 v 1.5.1
-	_Queue_list.txt의 encoding type을 UTF8로 지정
+    _Queue_list.txt의 encoding type을 UTF8로 지정
+    
 v 1.6
-	argparse.hook_runout 추가 (default: False)
-		txt 파일로 stdout을 hook (bool)
-	argparse.hook_runerr 추가 (default: True)
-		txt 파일로 stderr을 hook (bool)
+    argparse.hook_runout 추가 (default: False)
+        txt 파일로 stdout을 hook (bool)
+    argparse.hook_runerr 추가 (default: True)
+        txt 파일로 stderr을 hook (bool)
+    
+# * 현재 확인된 오류 *
+    windows os에선 subprocess.run 이 정상적으로 동작 안함
+    따라서 windows os에선 hook 기능 사용 불가
+    
+v 1.6.1
+    hook_runerr -> default False 로 변경
+    default log 폴더 이름이 queue list 이름을 반영하도록 변경
+    
