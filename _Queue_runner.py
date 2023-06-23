@@ -25,11 +25,12 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 if __name__ == "__main__":
+    _str_time =  str(time.strftime('%Y_%m_%d_%H_%M_%S'))                                                # 현재 시간 기록
     
     parser_options = argparse.ArgumentParser(description='_options')
     # set default
     path_q_list                 = "./_Queue_list.txt"                                                   # Queue list. 실행할 command 한 줄에 하나씩 적어두기
-    path_q_out                  = "./_Queue_log_" + str(time.strftime('%Y_%m_%d_%H_%M_%S'))             # Queue_runner 실행기록 저장폴더
+    path_q_out                  = "./" + path_q_list.split("/")[-1].split(".")[0] + "_log_" + _str_time # Queue_runner 실행기록 저장폴더
     
     command_restriction         = True                                                                  # command head 제한 여부
     list_allowd_command_head    = ["python", "srun", "#"]                                               # 사용 가능한 command 첫 단어 / #은 comment로 처리 -> 실행 안됨
@@ -38,7 +39,7 @@ if __name__ == "__main__":
     
     # ignore_fail -> hook_result -> hook_runout, hook_runerr
     hook_runout                 = False                                                                 # command 실행 결과 output hook 여부
-    hook_runerr                 = True                                                                  # command 실행 결과 error  hook 여부
+    hook_runerr                 = False                                                                 # command 실행 결과 error  hook 여부
     hook_count                  = 0
     
     list_finished = []      # 시도한 command
@@ -57,9 +58,16 @@ if __name__ == "__main__":
     parser_options.add_argument("--hook_runerr",         type = str2bool, default = hook_runerr,         help = "Hook command error (bool)")
     
     # argparse -> parser 
-    args_options        = parser_options.parse_args()
-    path_q_list         = args_options.path_in
-    path_q_out          = args_options.path_out
+    args_options    = parser_options.parse_args()
+    path_q_list     = args_options.path_in
+    
+    if path_q_out != args_options.path_out:
+        path_q_out = args_options.path_out
+        
+        if path_q_out[-1] == "/":
+            path_q_out = path_q_out[:-1]
+        
+        path_q_out = path_q_out + _str_time
     
     if not os.path.exists(path_q_out):
         os.makedirs(path_q_out)
